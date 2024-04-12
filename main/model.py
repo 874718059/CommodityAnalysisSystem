@@ -309,13 +309,13 @@ class BaseModel(models.Model):
     def __GetByParams(self, model, params):
 
         try:
-            __loginUser__ = model.__loginUser__
+            __登录User__ = model.__登录User__
         except:
-            __loginUser__ = None
+            __登录User__ = None
 
-        if __loginUser__ != None and __loginUser__!='username':
+        if __登录User__ != None and __登录User__!='username':
             if params.get('username'):
-                params[model.__loginUser__] = copy.deepcopy(params.get('username'))
+                params[model.__登录User__] = copy.deepcopy(params.get('username'))
                 del params['username']
         if model.__tablename__ != 'users':
             if params.get('password'):

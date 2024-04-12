@@ -8,7 +8,7 @@
 		<div class="right" :style='{"position":"absolute","right":"20px","top":"8px","display":"flex"}'>
 			<div :style='{"cursor":"pointer","margin":"0 5px","lineHeight":"44px","color":"#333"}' class="nickname">{{this.$storage.get('role')}} {{this.$storage.get('adminName')}}</div>
 			<div :style='{"cursor":"pointer","margin":"0 5px","lineHeight":"44px","color":"#666"}' v-if="this.$storage.get('role')=='管理员'" class="logout" @click="toBoard">看板</div>
-			<div :style='{"cursor":"pointer","margin":"0 5px","lineHeight":"44px","color":"#666"}' class="logout" @click="onLogout">退出login</div>
+			<div :style='{"cursor":"pointer","margin":"0 5px","lineHeight":"44px","color":"#666"}' class="logout" @click="onLogout">退出登录</div>
 		</div>
 		-->
 		
@@ -93,7 +93,7 @@
 				storage.clear()
 				this.$store.dispatch('tagsView/delAllViews')
 				router.replace({
-					name: "login"
+					name: "登录"
 				});
 			},
 			onIndexTap(){

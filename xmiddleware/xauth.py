@@ -20,7 +20,7 @@ class Xauth(MiddlewareMixin):
             filterList=[
                 "/index",
                 "/favicon.ico",
-                "/login",
+                "/登录",
                 "/register",
                 '.js',
                 ".css",
@@ -90,15 +90,15 @@ class Xauth(MiddlewareMixin):
         elif request.method == 'POST':
             post_list = [
                 '/{}/defaultuser/register'.format(schemaName),
-                '/{}/defaultuser/login'.format(schemaName),
+                '/{}/defaultuser/登录'.format(schemaName),
                 '/{}/users/register'.format(schemaName),
-                '/{}/users/login'.format(schemaName),
-                "/{}/examusers/login".format(schemaName),
+                '/{}/users/登录'.format(schemaName),
+                "/{}/examusers/登录".format(schemaName),
                 "/{}/examusers/register".format(schemaName),
                 "/{}/file/upload".format(schemaName),
                 "/update"
             ]  # 免认证list
-            if fullPath not in post_list and "register" not in fullPath and "login" not in fullPath and "faceLogin" not in fullPath and "update" not in fullPath and "upload" not in fullPath:  # 注册时不检测token。
+            if fullPath not in post_list and "register" not in fullPath and "登录" not in fullPath and "face登录" not in fullPath and "update" not in fullPath and "upload" not in fullPath:  # 注册时不检测token。
                 result = Auth.identify(Auth, request)
 
                 if result.get('code') != normal_code:

@@ -11,7 +11,7 @@ from util import message as mes
 class Auth(object):
     def authenticate(self, model, req_dict):
         """
-        用户login，login成功返回token；login失败返回失败原因
+        用户登录，登录成功返回token；登录失败返回失败原因
         :param username:账号
         :param password:密码
         :return: json

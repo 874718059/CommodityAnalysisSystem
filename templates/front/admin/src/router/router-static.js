@@ -6,7 +6,7 @@ Vue.use(VueRouter);
 import Index from '@/views/index'
 import Home from '@/views/home'
 import Board from '@/views/board'
-import Login from '@/views/login'
+import 登录 from '@/views/登录'
 import NotFound from '@/views/404'
 import UpdatePassword from '@/views/update-password'
 import pay from '@/views/pay'
@@ -62,10 +62,10 @@ export const routes = [{
     ]
   },
   {
-    path: '/login',
-    name: 'login',
-    component: Login,
-    meta: {icon:'', title:'login'}
+    path: '/登录',
+    name: '登录',
+    component: 登录,
+    meta: {icon:'', title:'登录'}
   },
   {
     path: '/board',

@@ -124,11 +124,11 @@ export default {
 				method: "get"
 			}).then(({ data }) => {
 				if (data && data.code != 0) {
-				router.push({ name: 'login' })
+				router.push({ name: '登录' })
 				}
 			});
 			}else{
-				router.push({ name: 'login' })
+				router.push({ name: '登录' })
 			}
 		},
 		getshangpinxinxiCount() {

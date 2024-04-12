@@ -39,7 +39,7 @@ def shangpinxinxi_register(request):
             msg['msg'] = "用户已存在,请勿重复注册!"
         return JsonResponse(msg)
 
-def shangpinxinxi_login(request):
+def shangpinxinxi_登录(request):
     if request.method in ["POST", "GET"]:
         msg = {'code': normal_code, "msg": mes.normal_code}
         req_dict = request.session.get("req_dict")
@@ -87,12 +87,12 @@ def shangpinxinxi_resetPass(request):
         columns=  shangpinxinxi.getallcolumn( shangpinxinxi, shangpinxinxi)
 
         try:
-            __loginUserColumn__= shangpinxinxi.__loginUserColumn__
+            __登录UserColumn__= shangpinxinxi.__登录UserColumn__
         except:
-            __loginUserColumn__=None
+            __登录UserColumn__=None
         username=req_dict.get(list(req_dict.keys())[0])
-        if __loginUserColumn__:
-            username_str=__loginUserColumn__
+        if __登录UserColumn__:
+            username_str=__登录UserColumn__
         else:
             username_str=username
         if 'mima' in columns:
@@ -155,7 +155,7 @@ def shangpinxinxi_page(request):
         if "vipread" in req_dict and "vipread" not in columns:
           del req_dict["vipread"]
 
-        #当前login用户所在表
+        #当前登录用户所在表
         tablename = request.session.get("tablename")
             #authColumn=list(__authTables__.keys())[0]
             #authTable=__authTables__.get(authColumn)

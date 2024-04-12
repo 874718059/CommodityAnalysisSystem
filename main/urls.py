@@ -10,7 +10,7 @@ from main import users_v, config_v, schema_v
 # url规则列表
 urlpatterns = [
     path(r'users/register', users_v.users_register),
-    path(r'users/login', users_v.users_login),
+    path(r'users/登录', users_v.users_登录),
     path(r'users/logout', users_v.users_logout),
     path(r'users/session', users_v.users_session),
     path(r'users/page', users_v.users_page),
@@ -62,8 +62,8 @@ for i in os.listdir(mainDir):
             [
                 path(r'{}/register'.format(tableName.lower()),
                      eval("{}_v.{}_register".format(tableName.capitalize(), tableName.lower()))),
-                path(r'{}/login'.format(tableName.lower()),
-                     eval("{}_v.{}_login".format(tableName.capitalize(), tableName.lower()))),
+                path(r'{}/登录'.format(tableName.lower()),
+                     eval("{}_v.{}_登录".format(tableName.capitalize(), tableName.lower()))),
                 path(r'{}/logout'.format(tableName.lower()),
                      eval("{}_v.{}_logout".format(tableName.capitalize(), tableName.lower()))),
                 path(r'{}/resetPass'.format(tableName.lower()),
@@ -181,7 +181,7 @@ urlpatterns.extend(
         path(r'remind/<tableName>/<columnName>/<type>', schema_v.schemaName_remind_tablename_columnname_type),
         # 前台提醒接口（通用接口，不需要登陆）
         path(r'<tableName>/remind/<columnName>/<type>', schema_v.schemaName_tablename_remind_columnname_type),
-        # 后台提醒接口 (每个表的单独接口，需login)
+        # 后台提醒接口 (每个表的单独接口，需登录)
         path(r'sh/<tableName>', schema_v.schemaName_sh),
         path(r'upload/<fileName>', schema_v.schemaName_upload),
         path(r'group/<tableName>/<columnName>', schema_v.schemaName_group_quyu),

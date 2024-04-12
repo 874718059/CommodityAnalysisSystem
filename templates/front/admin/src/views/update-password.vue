@@ -73,7 +73,7 @@ export default {
 	methods: {
 		onLogout() {
 			this.$storage.remove("Token");
-			this.$router.replace({ name: "login" });
+			this.$router.replace({ name: "登录" });
 		},
 		// 修改密码
 		async onUpdateHandler() {
@@ -103,7 +103,7 @@ export default {
 						}).then(({ data }) => {
 							if (data && data.code === 0) {
 								this.$message({
-									message: "修改密码成功,下次login系统生效",
+									message: "修改密码成功,下次登录系统生效",
 									type: "success",
 									duration: 1500,
 									onClose: () => {
@@ -138,7 +138,7 @@ export default {
 					}).then(({ data }) => {
 						if (data && data.code === 0) {
 							this.$message({
-								message: "修改密码成功,下次login系统生效",
+								message: "修改密码成功,下次登录系统生效",
 								type: "success",
 								duration: 1500,
 								onClose: () => {

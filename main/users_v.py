@@ -9,7 +9,7 @@ from util.auth import Auth
 import util.message as mes
 from dj2.settings import host,port,user,passwd,dbName,hasHadoop
 
-def users_login(request):
+def users_登录(request):
     if request.method in ["POST", "GET"]:
         msg = {'code': normal_code, "msg": mes.normal_code}
         req_dict = request.session.get("req_dict")

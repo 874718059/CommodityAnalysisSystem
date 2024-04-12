@@ -337,7 +337,7 @@ def schemaName_tablename_remind_columnname_type(request, tableName, columnName, 
         # 获取全部列名
         columns = tableModel.getallcolumn(tableModel, tableModel)
 
-        # 当前login用户所在表
+        # 当前登录用户所在表
         tablename = request.session.get("tablename")
         # 当列属性authTable有值(某个用户表)[该列的列名必须和该用户表的登陆字段名一致]，则对应的表有个隐藏属性authTable为”是”，那么该用户查看该表信息时，只能查看自己的
         try:

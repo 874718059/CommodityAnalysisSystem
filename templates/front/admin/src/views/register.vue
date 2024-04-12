@@ -45,8 +45,8 @@
                         @change="yonghutouxiangUploadChange"
                     ></file-upload>
 				</el-form-item>
-				<button :style='{"border":"0","cursor":"pointer","padding":"0px","boxShadow":"0 0 0px rgba(64, 158, 255, .5)","margin":"20px auto 5px","color":"#fff","display":"inline-block","letterSpacing":"4px","outline":"none","borderRadius":"0px","background":"#1e3c4f","width":"100%","fontSize":"18px","fontWeight":"500","height":"50px"}' type="button" class="r-btn" @click="login()">注册</button>
-				<div :style='{"cursor":"pointer","padding":"0 20px","margin":"10px 0 0","color":"#1e3c4f","textAlign":"right","display":"inline-block","width":"auto","lineHeight":"1","fontSize":"14px"}' class="r-login" @click="close()">已有账号，直接login</div>
+				<button :style='{"border":"0","cursor":"pointer","padding":"0px","boxShadow":"0 0 0px rgba(64, 158, 255, .5)","margin":"20px auto 5px","color":"#fff","display":"inline-block","letterSpacing":"4px","outline":"none","borderRadius":"0px","background":"#1e3c4f","width":"100%","fontSize":"18px","fontWeight":"500","height":"50px"}' type="button" class="r-btn" @click="登录()">注册</button>
+				<div :style='{"cursor":"pointer","padding":"0 20px","margin":"10px 0 0","color":"#1e3c4f","textAlign":"right","display":"inline-block","width":"auto","lineHeight":"1","fontSize":"14px"}' class="r-登录" @click="close()">已有账号，直接登录</div>
 			</el-form>
 			
 		</div>
@@ -70,7 +70,7 @@ export default {
 		this.pageFlag = this.$route.query.pageFlag
 		if(this.$route.query.pageFlag=='register'){
 			
-			let table = this.$storage.get("loginTable");
+			let table = this.$storage.get("登录Table");
 			this.tableName = table;
 			if(this.tableName=='yonghu'){
 				this.ruleForm = {
@@ -110,7 +110,7 @@ export default {
 			return new Date().getTime();
 		},
 		close(){
-			this.$router.push({ path: "/login" });
+			this.$router.push({ path: "/登录" });
 		},
         yonghutouxiangUploadChange(fileUrls) {
             this.ruleForm.touxiang = fileUrls;
@@ -120,7 +120,7 @@ export default {
 
 
 		// 注册
-		login() {
+		登录() {
 			var url=this.tableName+"/register";
 					if((!this.ruleForm.zhanghao) && `yonghu` == this.tableName){
 						this.$message.error(`账号不能为空`);
@@ -156,7 +156,7 @@ export default {
 						type: "success",
 						duration: 1500,
 						onClose: () => {
-							this.$router.replace({ path: "/login" });
+							this.$router.replace({ path: "/登录" });
 						}
 					});
 				} else {

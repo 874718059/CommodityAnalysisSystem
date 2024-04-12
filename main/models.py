@@ -12,12 +12,12 @@ class yonghu(BaseModel):
     __doc__ = u'''yonghu'''
     __tablename__ = 'yonghu'
 
-    __loginUser__='zhanghao'
+    __登录User__='zhanghao'
 
 
     __authTables__={}
-    __authPeople__='是'#用户表，表属性loginUserColumn对应的值就是用户名字段，mima就是密码字段
-    __loginUserColumn__='zhanghao'#用户表，表属性loginUserColumn对应的值就是用户名字段，mima就是密码字段
+    __authPeople__='是'#用户表，表属性登录UserColumn对应的值就是用户名字段，mima就是密码字段
+    __登录UserColumn__='zhanghao'#用户表，表属性登录UserColumn对应的值就是用户名字段，mima就是密码字段
     __sfsh__='否'#表sfsh(是否审核，”是”或”否”)字段和sfhf(审核回复)字段，后台列表(page)的操作中要多一个”审核”按钮，点击”审核”弹出一个页面，包含”是否审核”和”审核回复”，点击确定调用update接口，修改sfsh和sfhf两个字段。
     __authSeparate__='否'#后台列表权限
     __thumbsUp__='否'#表属性thumbsUp[是/否]，新增thumbsupnum赞和crazilynum踩字段
@@ -51,7 +51,7 @@ class shangpinxinxi(BaseModel):
 
 
     __authTables__={}
-    __authPeople__='否'#用户表，表属性loginUserColumn对应的值就是用户名字段，mima就是密码字段
+    __authPeople__='否'#用户表，表属性登录UserColumn对应的值就是用户名字段，mima就是密码字段
     __sfsh__='否'#表sfsh(是否审核，”是”或”否”)字段和sfhf(审核回复)字段，后台列表(page)的操作中要多一个”审核”按钮，点击”审核”弹出一个页面，包含”是否审核”和”审核回复”，点击确定调用update接口，修改sfsh和sfhf两个字段。
     __authSeparate__='否'#后台列表权限
     __thumbsUp__='否'#表属性thumbsUp[是/否]，新增thumbsupnum赞和crazilynum踩字段
